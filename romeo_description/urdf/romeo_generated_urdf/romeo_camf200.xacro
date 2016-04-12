@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<!--******************************************************************
+********************** File File created by hand *************************
+*********************************************************************-->
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+        <link name="CameraF200_frame"/>
+        <joint name="CameraF200_joint" type="fixed">
+                <parent link="HeadRoll_link"/>
+                <child link="CameraF200_frame"/>
+                <origin rpy="0.0 0.0 0.0" xyz="0.14 0.0 0.185"/>
+        </joint>
+        <link name="CameraF200_depth_optical_frame"/>
+        <joint name="CameraF200_depth_optical_frame_fixedjoint" type="fixed">
+                <parent link="CameraF200_frame"/>
+                <child link="CameraF200_depth_optical_frame"/>
+                <origin rpy="-2.7 0 -1.5708" xyz="0.0 0.0 0.0"/>
+        </joint>
+        <link name="CameraF200_uncalib_depth_optical_frame"/>
+        <joint name="CameraF200_uncalib_depth_optical_frame_fixedjoint" type="fixed">
+                <parent link="CameraF200_frame"/>
+                <child link="CameraF200_uncalib_depth_optical_frame"/>
+                <origin rpy="-2.61799 0 -1.5708" xyz="0.0 0.0 0.0"/>
+        </joint>
+</robot>
